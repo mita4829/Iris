@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jdZ-aw-zuS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="sqH-O6-D3j">
+            <objects>
+                <viewController id="jdZ-aw-zuS" customClass="ViewController" customModule="Iris" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ypk-Tf-Wtb"/>
+                        <viewControllerLayoutGuide type="bottom" id="9QN-QV-Ox3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vAT-lw-E86">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpy-bE-HPb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backgroundTapped:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="wIA-eV-WrH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iris Alpha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="GZV-Ar-VK8">
+                                <rect key="frame" x="26" y="30" width="323" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFO-tR-YTL">
+                                <rect key="frame" x="117" y="619" width="258" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="5jd-93-QTu"/>
+                                    <constraint firstAttribute="height" constant="42" id="Pec-pz-894"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="16"/>
+                                <inset key="titleEdgeInsets" minX="-570" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="185" maxY="0.0"/>
+                                <state key="normal" title="Share with your Beloved" image="Envelope.png">
+                                    <color key="titleColor" red="0.20823948410000001" green="0.48525439399999998" blue="0.94421184390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sharePoem:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="cbg-OU-Yx7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Da7-xp-igK">
+                                <rect key="frame" x="245" y="394" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="U2a-0S-u1T"/>
+                                    <constraint firstAttribute="height" constant="40" id="cSh-bh-ZMi"/>
+                                </constraints>
+                                <state key="normal" image="Swap.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="swapText:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="CMW-7U-5rX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-WW-BLk">
+                                <rect key="frame" x="36" y="88" width="248" height="221"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-kQ-vT7">
+                                        <rect key="frame" x="1" y="1" width="246" height="219"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="jdZ-aw-zuS" id="fBl-z4-n9A"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="JqH-kQ-vT7" firstAttribute="leading" secondItem="rVw-WW-BLk" secondAttribute="leading" constant="1" id="2Uy-F7-KIQ"/>
+                                    <constraint firstAttribute="width" constant="248" id="5d1-f0-ghz"/>
+                                    <constraint firstItem="JqH-kQ-vT7" firstAttribute="top" secondItem="rVw-WW-BLk" secondAttribute="top" constant="1" id="GVs-pw-sdv"/>
+                                    <constraint firstAttribute="bottom" secondItem="JqH-kQ-vT7" secondAttribute="bottom" constant="1" id="rpG-pB-XzH"/>
+                                    <constraint firstAttribute="trailing" secondItem="JqH-kQ-vT7" secondAttribute="trailing" constant="1" id="vbD-jB-xnc"/>
+                                    <constraint firstAttribute="height" constant="221" id="xu7-3Q-MfI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6D-qp-YuB">
+                                <rect key="frame" x="124" y="339" width="74" height="30"/>
+                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="15"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="wSC-FV-oWk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find this..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzZ-Bj-jDc">
+                                <rect key="frame" x="37" y="399" width="96" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="jdZ-aw-zuS" eventType="editingDidEndOnExit" id="uFa-Uc-W1N"/>
+                                    <outlet property="delegate" destination="jdZ-aw-zuS" id="Qo6-H3-P3U"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Replace with..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOA-KR-r7G">
+                                <rect key="frame" x="141" y="399" width="96" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEndEditing:" destination="jdZ-aw-zuS" eventType="editingDidEndOnExit" id="tLy-T7-tK0"/>
+                                    <outlet property="delegate" destination="jdZ-aw-zuS" id="bd6-dc-3RJ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90836154400000002" green="0.9329398404" blue="0.94421184390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JqH-kQ-vT7" firstAttribute="trailing" secondItem="Da7-xp-igK" secondAttribute="trailing" constant="-2" id="1be-ox-fBo"/>
+                            <constraint firstItem="Da7-xp-igK" firstAttribute="leading" secondItem="lOA-KR-r7G" secondAttribute="trailing" constant="8" id="6A4-kU-ABF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xFO-tR-YTL" secondAttribute="trailing" constant="-16" id="6Wd-m2-V5Y"/>
+                            <constraint firstItem="rVw-WW-BLk" firstAttribute="top" secondItem="GZV-Ar-VK8" secondAttribute="bottom" constant="10" id="EiD-2u-IDU"/>
+                            <constraint firstItem="9QN-QV-Ox3" firstAttribute="top" secondItem="xFO-tR-YTL" secondAttribute="bottom" constant="6" id="EiY-1X-3D8"/>
+                            <constraint firstItem="Dpy-bE-HPb" firstAttribute="centerX" secondItem="lOA-KR-r7G" secondAttribute="centerX" constant="-28.5" id="JGQ-kp-dKk"/>
+                            <constraint firstItem="lzZ-Bj-jDc" firstAttribute="leading" secondItem="JqH-kQ-vT7" secondAttribute="leading" id="K7g-kZ-Kuj"/>
+                            <constraint firstItem="Da7-xp-igK" firstAttribute="centerY" secondItem="lOA-KR-r7G" secondAttribute="centerY" id="O5H-75-7m6"/>
+                            <constraint firstItem="O6D-qp-YuB" firstAttribute="top" secondItem="rVw-WW-BLk" secondAttribute="bottom" constant="30" id="RUR-GG-mnK"/>
+                            <constraint firstItem="GZV-Ar-VK8" firstAttribute="leading" secondItem="vAT-lw-E86" secondAttribute="leadingMargin" constant="10" id="Sss-Qa-jgS"/>
+                            <constraint firstItem="9QN-QV-Ox3" firstAttribute="top" secondItem="Dpy-bE-HPb" secondAttribute="bottom" id="gf7-UL-tmr"/>
+                            <constraint firstItem="lzZ-Bj-jDc" firstAttribute="centerY" secondItem="lOA-KR-r7G" secondAttribute="centerY" id="kjn-lY-deT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GZV-Ar-VK8" secondAttribute="trailing" constant="10" id="mcp-fZ-pg1"/>
+                            <constraint firstItem="Dpy-bE-HPb" firstAttribute="leading" secondItem="vAT-lw-E86" secondAttribute="leading" id="oJK-kp-Zwi"/>
+                            <constraint firstItem="GZV-Ar-VK8" firstAttribute="top" secondItem="ypk-Tf-Wtb" secondAttribute="bottom" constant="10" id="omh-dU-Go2"/>
+                            <constraint firstItem="Dpy-bE-HPb" firstAttribute="top" secondItem="vAT-lw-E86" secondAttribute="top" id="pVf-kl-QPw"/>
+                            <constraint firstAttribute="centerX" secondItem="rVw-WW-BLk" secondAttribute="centerX" id="qUY-5q-tuL"/>
+                            <constraint firstItem="lOA-KR-r7G" firstAttribute="leading" secondItem="lzZ-Bj-jDc" secondAttribute="trailing" constant="8" id="tie-lY-dRi"/>
+                            <constraint firstItem="O6D-qp-YuB" firstAttribute="centerX" secondItem="Dpy-bE-HPb" secondAttribute="centerX" id="u4X-hN-eh9"/>
+                            <constraint firstItem="lzZ-Bj-jDc" firstAttribute="top" secondItem="O6D-qp-YuB" secondAttribute="bottom" constant="30" id="uwV-Of-ZpN"/>
+                            <constraint firstAttribute="trailing" secondItem="Dpy-bE-HPb" secondAttribute="trailing" id="vHk-Nl-eHb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="findTextField" destination="lzZ-Bj-jDc" id="2YT-fB-PRZ"/>
+                        <outlet property="replaceTextField" destination="lOA-KR-r7G" id="qNJ-fI-SCa"/>
+                        <outlet property="textView" destination="JqH-kQ-vT7" id="x72-7W-tOE"/>
+                        <outlet property="topMarginConstraint" destination="omh-dU-Go2" id="RPb-7Y-28p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-aI-0UQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="281.16000000000003"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Envelope.png" width="16" height="16"/>
+        <image name="Swap.png" width="16" height="16"/>
+    </resources>
+</document>

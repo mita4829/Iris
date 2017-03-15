@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DA277081E6CAE160062A5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA277071E6CAE160062A5B4 /* AppDelegate.swift */; };
+		6DA2770A1E6CAE160062A5B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA277091E6CAE160062A5B4 /* ViewController.swift */; };
+		6DA2771D1E6CAE160062A5B4 /* IrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA2771C1E6CAE160062A5B4 /* IrisTests.swift */; };
+		6DA277281E6CAE160062A5B4 /* IrisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA277271E6CAE160062A5B4 /* IrisUITests.swift */; };
+		6DA277671E6CAF130062A5B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA277661E6CAF130062A5B4 /* CoreImage.framework */; };
+		6DA277691E6CAF1D0062A5B4 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA277681E6CAF1D0062A5B4 /* libc++.1.dylib */; };
+		6DA2776B1E6CAF2A0062A5B4 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DA2776A1E6CAF2A0062A5B4 /* TesseractOCR.framework */; };
+		6DA2776C1E6CAF8C0062A5B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2770B1E6CAE160062A5B4 /* Main.storyboard */; };
+		6DA2776D1E6CAF920062A5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA277101E6CAE160062A5B4 /* LaunchScreen.storyboard */; };
+		6DA2776F1E6CB1650062A5B4 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2776E1E6CB1650062A5B4 /* tessdata */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DA277191E6CAE160062A5B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DA276FC1E6CAE160062A5B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DA277031E6CAE160062A5B4;
+			remoteInfo = Iris;
+		};
+		6DA277241E6CAE160062A5B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DA276FC1E6CAE160062A5B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DA277031E6CAE160062A5B4;
+			remoteInfo = Iris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DA277041E6CAE160062A5B4 /* Iris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA277071E6CAE160062A5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6DA277091E6CAE160062A5B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6DA2770C1E6CAE160062A5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DA2770E1E6CAE160062A5B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DA277111E6CAE160062A5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6DA277131E6CAE160062A5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DA277181E6CAE160062A5B4 /* IrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA2771C1E6CAE160062A5B4 /* IrisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisTests.swift; sourceTree = "<group>"; };
+		6DA2771E1E6CAE160062A5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DA277231E6CAE160062A5B4 /* IrisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IrisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA277271E6CAE160062A5B4 /* IrisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisUITests.swift; sourceTree = "<group>"; };
+		6DA277291E6CAE160062A5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DA277611E6CAED10062A5B4 /* Iris-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Iris-Bridging-Header.h"; sourceTree = "<group>"; };
+		6DA277661E6CAF130062A5B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		6DA277681E6CAF1D0062A5B4 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		6DA2776A1E6CAF2A0062A5B4 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		6DA2776E1E6CB1650062A5B4 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DA277011E6CAE160062A5B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA277691E6CAF1D0062A5B4 /* libc++.1.dylib in Frameworks */,
+				6DA2776B1E6CAF2A0062A5B4 /* TesseractOCR.framework in Frameworks */,
+				6DA277671E6CAF130062A5B4 /* CoreImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA277151E6CAE160062A5B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA277201E6CAE160062A5B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DA276FB1E6CAE160062A5B4 = {
+			isa = PBXGroup;
+			children = (
+				6DA277061E6CAE160062A5B4 /* Iris */,
+				6DA2771B1E6CAE160062A5B4 /* IrisTests */,
+				6DA277261E6CAE160062A5B4 /* IrisUITests */,
+				6DA277051E6CAE160062A5B4 /* Products */,
+				6DA277611E6CAED10062A5B4 /* Iris-Bridging-Header.h */,
+				6DA277651E6CAF130062A5B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6DA277051E6CAE160062A5B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DA277041E6CAE160062A5B4 /* Iris.app */,
+				6DA277181E6CAE160062A5B4 /* IrisTests.xctest */,
+				6DA277231E6CAE160062A5B4 /* IrisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DA277061E6CAE160062A5B4 /* Iris */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2776A1E6CAF2A0062A5B4 /* TesseractOCR.framework */,
+				6DA277071E6CAE160062A5B4 /* AppDelegate.swift */,
+				6DA277091E6CAE160062A5B4 /* ViewController.swift */,
+				6DA2770B1E6CAE160062A5B4 /* Main.storyboard */,
+				6DA2770E1E6CAE160062A5B4 /* Assets.xcassets */,
+				6DA277101E6CAE160062A5B4 /* LaunchScreen.storyboard */,
+				6DA277131E6CAE160062A5B4 /* Info.plist */,
+				6DA277351E6CAE230062A5B4 /* Supporting Files */,
+			);
+			path = Iris;
+			sourceTree = "<group>";
+		};
+		6DA2771B1E6CAE160062A5B4 /* IrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2771C1E6CAE160062A5B4 /* IrisTests.swift */,
+				6DA2771E1E6CAE160062A5B4 /* Info.plist */,
+			);
+			path = IrisTests;
+			sourceTree = "<group>";
+		};
+		6DA277261E6CAE160062A5B4 /* IrisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6DA277271E6CAE160062A5B4 /* IrisUITests.swift */,
+				6DA277291E6CAE160062A5B4 /* Info.plist */,
+			);
+			path = IrisUITests;
+			sourceTree = "<group>";
+		};
+		6DA277351E6CAE230062A5B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DA2776E1E6CB1650062A5B4 /* tessdata */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DA277651E6CAF130062A5B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DA277681E6CAF1D0062A5B4 /* libc++.1.dylib */,
+				6DA277661E6CAF130062A5B4 /* CoreImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DA277031E6CAE160062A5B4 /* Iris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA2772C1E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "Iris" */;
+			buildPhases = (
+				6DA277001E6CAE160062A5B4 /* Sources */,
+				6DA277011E6CAE160062A5B4 /* Frameworks */,
+				6DA277021E6CAE160062A5B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Iris;
+			productName = Iris;
+			productReference = 6DA277041E6CAE160062A5B4 /* Iris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DA277171E6CAE160062A5B4 /* IrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA2772F1E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "IrisTests" */;
+			buildPhases = (
+				6DA277141E6CAE160062A5B4 /* Sources */,
+				6DA277151E6CAE160062A5B4 /* Frameworks */,
+				6DA277161E6CAE160062A5B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DA2771A1E6CAE160062A5B4 /* PBXTargetDependency */,
+			);
+			name = IrisTests;
+			productName = IrisTests;
+			productReference = 6DA277181E6CAE160062A5B4 /* IrisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6DA277221E6CAE160062A5B4 /* IrisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA277321E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "IrisUITests" */;
+			buildPhases = (
+				6DA2771F1E6CAE160062A5B4 /* Sources */,
+				6DA277201E6CAE160062A5B4 /* Frameworks */,
+				6DA277211E6CAE160062A5B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DA277251E6CAE160062A5B4 /* PBXTargetDependency */,
+			);
+			name = IrisUITests;
+			productName = IrisUITests;
+			productReference = 6DA277231E6CAE160062A5B4 /* IrisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DA276FC1E6CAE160062A5B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Michael Tang";
+				TargetAttributes = {
+					6DA277031E6CAE160062A5B4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KRSWH4Y4D5;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					6DA277171E6CAE160062A5B4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6DA277031E6CAE160062A5B4;
+					};
+					6DA277221E6CAE160062A5B4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6DA277031E6CAE160062A5B4;
+					};
+				};
+			};
+			buildConfigurationList = 6DA276FF1E6CAE160062A5B4 /* Build configuration list for PBXProject "Iris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DA276FB1E6CAE160062A5B4;
+			productRefGroup = 6DA277051E6CAE160062A5B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DA277031E6CAE160062A5B4 /* Iris */,
+				6DA277171E6CAE160062A5B4 /* IrisTests */,
+				6DA277221E6CAE160062A5B4 /* IrisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DA277021E6CAE160062A5B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2776D1E6CAF920062A5B4 /* LaunchScreen.storyboard in Resources */,
+				6DA2776C1E6CAF8C0062A5B4 /* Main.storyboard in Resources */,
+				6DA2776F1E6CB1650062A5B4 /* tessdata in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA277161E6CAE160062A5B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA277211E6CAE160062A5B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DA277001E6CAE160062A5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2770A1E6CAE160062A5B4 /* ViewController.swift in Sources */,
+				6DA277081E6CAE160062A5B4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA277141E6CAE160062A5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA2771D1E6CAE160062A5B4 /* IrisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA2771F1E6CAE160062A5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA277281E6CAE160062A5B4 /* IrisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DA2771A1E6CAE160062A5B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DA277031E6CAE160062A5B4 /* Iris */;
+			targetProxy = 6DA277191E6CAE160062A5B4 /* PBXContainerItemProxy */;
+		};
+		6DA277251E6CAE160062A5B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DA277031E6CAE160062A5B4 /* Iris */;
+			targetProxy = 6DA277241E6CAE160062A5B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DA2770B1E6CAE160062A5B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA2770C1E6CAE160062A5B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6DA277101E6CAE160062A5B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DA277111E6CAE160062A5B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DA2772A1E6CAE160062A5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		6DA2772B1E6CAE160062A5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6DA2772D1E6CAE160062A5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KRSWH4Y4D5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Iris",
+				);
+				INFOPLIST_FILE = Iris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Iris-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6DA2772E1E6CAE160062A5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KRSWH4Y4D5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Iris",
+				);
+				INFOPLIST_FILE = Iris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Iris-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		6DA277301E6CAE160062A5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IrisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris.IrisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iris.app/Iris";
+			};
+			name = Debug;
+		};
+		6DA277311E6CAE160062A5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IrisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris.IrisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Iris.app/Iris";
+			};
+			name = Release;
+		};
+		6DA277331E6CAE160062A5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IrisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris.IrisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Iris;
+			};
+			name = Debug;
+		};
+		6DA277341E6CAE160062A5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IrisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IrisTeam.Iris.IrisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Iris;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DA276FF1E6CAE160062A5B4 /* Build configuration list for PBXProject "Iris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA2772A1E6CAE160062A5B4 /* Debug */,
+				6DA2772B1E6CAE160062A5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DA2772C1E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "Iris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA2772D1E6CAE160062A5B4 /* Debug */,
+				6DA2772E1E6CAE160062A5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DA2772F1E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "IrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA277301E6CAE160062A5B4 /* Debug */,
+				6DA277311E6CAE160062A5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DA277321E6CAE160062A5B4 /* Build configuration list for PBXNativeTarget "IrisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA277331E6CAE160062A5B4 /* Debug */,
+				6DA277341E6CAE160062A5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DA276FC1E6CAE160062A5B4 /* Project object */;
+}
