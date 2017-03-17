@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8.2.1
+
+script:
+  - xctool test -test-sdk iphonesimulator10.0 -simulator iphone
