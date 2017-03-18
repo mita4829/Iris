@@ -1,4 +1,4 @@
-language: objective-c  #1
+language: swift  #1
 osx_image: xcode8.2 #2
 xcode_project: Iris.xcodeproj #3
 xcode_scheme: IrisTests #4
