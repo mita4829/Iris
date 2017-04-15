@@ -28,8 +28,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlP-tY-Kzl">
+                                <rect key="frame" x="138" y="445" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="u42-Uz-FsH"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-WW-BLk">
-                                <rect key="frame" x="36" y="88" width="248" height="221"/>
+                                <rect key="frame" x="63" y="67" width="248" height="221"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-kQ-vT7">
                                         <rect key="frame" x="1" y="1" width="246" height="219"/>
@@ -51,16 +59,8 @@
                                     <constraint firstAttribute="height" constant="221" id="xu7-3Q-MfI"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlP-tY-Kzl">
-                                <rect key="frame" x="138" y="445" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="u42-Uz-FsH"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90836154400000002" green="0.9329398404" blue="0.94421184390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rVw-WW-BLk" firstAttribute="top" secondItem="GZV-Ar-VK8" secondAttribute="bottom" constant="10" id="EiD-2u-IDU"/>
                             <constraint firstItem="GZV-Ar-VK8" firstAttribute="leading" secondItem="vAT-lw-E86" secondAttribute="leadingMargin" constant="10" id="Sss-Qa-jgS"/>
