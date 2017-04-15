@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Iris would like to access your photos to analyze text-based images.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Iris would like to use your camera to analyze text. </string>
+	<string>Iris will use your camera to take text-based images to analyze.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

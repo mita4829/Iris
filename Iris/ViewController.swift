@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  LoveInASnap
+//  Iris
 //
-//  Created by Lyndsey Scott on 1/11/15
+//  Created by Lyndsey Scott on 1/11/15 Modified by Michael Tang
 //  for http://www.raywenderlich.com/
 //  Copyright (c) 2015 Lyndsey Scott. All rights reserved.
 //
@@ -11,11 +11,9 @@ import UIKit
 import Foundation
 
 
-class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var findTextField: UITextField!
-    @IBOutlet weak var replaceTextField: UITextField!
+    @IBOutlet weak var textView: UITextView!    
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     
     var activityIndicator:UIActivityIndicatorView!
@@ -25,93 +23,62 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         originalTopMargin = topMarginConstraint.constant
     }
-    
-    @IBAction func takePhoto(sender: AnyObject) {
+    @IBAction func takePhoto(_ sender: UIButton) {
         // 1
+        
         view.endEditing(true)
         moveViewDown()
         // 2
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
-                                                       message: nil, preferredStyle: .ActionSheet)
-        // 3
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            let cameraButton = UIAlertAction(title: "Take Photo",
-                                             style: .Default) { (alert) -> Void in
-                                                let imagePicker = UIImagePickerController()
-                                                imagePicker.delegate = self
-                                                imagePicker.sourceType = .Camera
-                                                self.presentViewController(imagePicker,
-                                                                           animated: true,
-                                                                           completion: nil)
-            }
-            imagePickerActionSheet.addAction(cameraButton)
-        }
-        // 4
-        let libraryButton = UIAlertAction(title: "Choose Existing",
-                                          style: .Default) { (alert) -> Void in
-                                            let imagePicker = UIImagePickerController()
-                                            imagePicker.delegate = self
-                                            imagePicker.sourceType = .PhotoLibrary
-                                            self.presentViewController(imagePicker,
-                                                                       animated: true,
-                                                                       completion: nil)
-        }
-        imagePickerActionSheet.addAction(libraryButton)
-        // 5
-        let cancelButton = UIAlertAction(title: "Cancel",
-                                         style: .Cancel) { (alert) -> Void in
-        }
-        imagePickerActionSheet.addAction(cancelButton)
-        // 6
-        presentViewController(imagePickerActionSheet, animated: true,
-                              completion: nil)
+         message: nil, preferredStyle: .actionSheet)
+         // 3
+        
+         if UIImagePickerController.isSourceTypeAvailable(.camera) {
+         let cameraButton = UIAlertAction(title: "Take Photo",
+         style: .default) { (alert) -> Void in
+         let imagePicker = UIImagePickerController()
+         imagePicker.delegate = self
+         imagePicker.sourceType = .camera
+         self.present(imagePicker,
+         animated: true,
+         completion: nil)
+         }
+         imagePickerActionSheet.addAction(cameraButton)
+         }
+         // 4
+        
+         let libraryButton = UIAlertAction(title: "Choose Existing",
+         style: .default) { (alert) -> Void in
+         let imagePicker = UIImagePickerController()
+         imagePicker.delegate = self
+         imagePicker.sourceType = .photoLibrary
+         self.present(imagePicker,
+         animated: true,
+         completion: nil)
+         }
+        
+         imagePickerActionSheet.addAction(libraryButton)
+         // 5
+         let cancelButton = UIAlertAction(title: "Cancel",
+         style: .cancel) { (alert) -> Void in
+         }
+         imagePickerActionSheet.addAction(cancelButton)
+         // 6
+         present(imagePickerActionSheet, animated: true,
+         completion: nil)
+ 
     }
     
-    @IBAction func swapText(sender: AnyObject) {
-        // 1
-        if let text = textView.text, let findText = findTextField.text, let replaceText = replaceTextField.text {
-            // 2
-            textView.text =
-                text.stringByReplacingOccurrencesOfString(findText,
-                                                          withString: replaceText, options: [], range: nil)
-            // 3
-            findTextField.text = nil
-            replaceTextField.text = nil
-            // 4
-            view.endEditing(true)
-            moveViewDown()
-        }
-    }
-    
-    @IBAction func sharePoem(sender: AnyObject) {
-        // 1
-        if textView.text.isEmpty {
-            return
-        }
-        // 2
-        let activityViewController = UIActivityViewController(activityItems:
-            [textView.text], applicationActivities: nil)
-        // 3
-        let excludeActivities = [
-            UIActivityTypeAssignToContact,
-            UIActivityTypeSaveToCameraRoll,
-            UIActivityTypeAddToReadingList,
-            UIActivityTypePostToFlickr,
-            UIActivityTypePostToVimeo]
-        activityViewController.excludedActivityTypes = excludeActivities
-        // 4
-        presentViewController(activityViewController, animated: true,
-                              completion: nil)
-    }
+
     
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
         
-        var scaledSize = CGSizeMake(maxDimension, maxDimension)
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
         var scaleFactor:CGFloat
         
         if image.size.width > image.size.height {
@@ -125,7 +92,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         }
         
         UIGraphicsBeginImageContext(scaledSize)
-        image.drawInRect(CGRectMake(0, 0, scaledSize.width, scaledSize.height))
+        image.draw(in: CGRect(x:0, y:0, width:scaledSize.width, height:scaledSize.height))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -136,7 +103,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     
     func addActivityIndicator() {
         activityIndicator = UIActivityIndicatorView(frame: view.bounds)
-        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.activityIndicatorViewStyle = .whiteLarge
         activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.25)
         activityIndicator.startAnimating()
         view.addSubview(activityIndicator)
@@ -157,7 +124,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         }
         
         topMarginConstraint.constant -= 135
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
     }
@@ -168,16 +135,16 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         }
         
         topMarginConstraint.constant = originalTopMargin
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
         
     }
     
-    @IBAction func backgroundTapped(sender: AnyObject) {
+    /*@IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
         moveViewDown()
-    }
+    }*/
     
     func performImageRecognition(image: UIImage) {
         // 1
@@ -185,9 +152,9 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         // 2
         tesseract.language = "eng+fra"
         // 3
-        tesseract.engineMode = .TesseractCubeCombined
+        tesseract.engineMode = .tesseractCubeCombined
         // 4
-        tesseract.pageSegmentationMode = .Auto
+        tesseract.pageSegmentationMode = .auto
         // 5
         tesseract.maximumRecognitionTime = 60.0
         // 6
@@ -195,14 +162,27 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         tesseract.recognize()
         // 7
         textView.text = tesseract.recognizedText
-        textView.editable = true
+        textView.isEditable = true
         // 8
         removeActivityIndicator()
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            //let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage
+            let scaledImage = scaleImage(image: selectedPhoto, maxDimension: 640)
+            
+            addActivityIndicator()
+            dismiss(animated: true, completion: {
+                self.performImageRecognition(image: scaledImage)
+            })
+        }
+    }
+
 }
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         moveViewUp()
     }
     
@@ -216,16 +196,5 @@ extension ViewController: UITextFieldDelegate {
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate {
-    func imagePickerController(picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let scaledImage = scaleImage(selectedPhoto, maxDimension: 640)
-        
-        addActivityIndicator()
-        
-        dismissViewControllerAnimated(true, completion: {
-            self.performImageRecognition(scaledImage)
-        })
-    }
-}
+
+
