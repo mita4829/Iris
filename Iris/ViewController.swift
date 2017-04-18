@@ -14,7 +14,7 @@ import Foundation
 class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var textView: UITextView!    
-    @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
+    //@IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     
     var activityIndicator:UIActivityIndicatorView!
     var originalTopMargin:CGFloat!
@@ -26,13 +26,13 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        originalTopMargin = topMarginConstraint.constant
+        //originalTopMargin = topMarginConstraint.constant
     }
     @IBAction func takePhoto(_ sender: UIButton) {
         // 1
         
         view.endEditing(true)
-        moveViewDown()
+        //moveViewDown()
         // 2
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
          message: nil, preferredStyle: .actionSheet)
@@ -118,7 +118,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     // The remaining methods handle the keyboard resignation/
     // move the view so that the first responders aren't hidden
     
-    func moveViewUp() {
+   /* func moveViewUp() {
         if topMarginConstraint.constant != originalTopMargin {
             return
         }
@@ -139,7 +139,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
             self.view.layoutIfNeeded()
         })
         
-    }
+    }*/
     
     /*@IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
@@ -181,7 +181,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
 
 }
 
-extension ViewController: UITextFieldDelegate {
+/*extension ViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         moveViewUp()
     }
@@ -194,7 +194,8 @@ extension ViewController: UITextFieldDelegate {
     func textViewDidBeginEditing(textView: UITextView) {
         moveViewDown()
     }
-}
+}*/
+
 
 
 
