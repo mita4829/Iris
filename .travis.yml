@@ -1,7 +1,5 @@
 language: swift  
-osx_image:
-   -  xcode8.2
-   -  xcode8.3 
+osx_image: xcode8.3 
 xcode_project: Iris.xcodeproj 
 xcode_scheme: IrisTests 
 xcode_sdk: iphonesimulator10.1 
