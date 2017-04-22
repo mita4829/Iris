@@ -1,11 +1,11 @@
 //
 //  AppDelegate.swift
-//  LoveInASnap
+//  Iris
 //
-//  Created by Lyndsey Scott on 1/11/15.
-//  for http://www.raywenderlich.com/
-//  Copyright (c) 2015 Lyndsey Scott. All rights reserved.
-//
+//  Created by Michael Tang on 4/22/17.
+//  Copyright (c) 2017 Michael Tang. All rights reserved.
+//  Tesseract OCR, Lyndsey Scott
+
 
 import UIKit
 

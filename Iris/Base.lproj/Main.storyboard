@@ -21,13 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-lH-PN7">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" shadowImage="gradientHeader" translatesAutoresizingMaskIntoConstraints="NO" id="6Np-lH-PN7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <color key="backgroundColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="gh2-nY-PfU"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.54117647058823526" green="0.60784313725490191" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -35,16 +34,59 @@
                                     <navigationItem title="Iris" id="4lJ-Zd-yMn"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-sL-G3b">
-                                <rect key="frame" x="170" y="538" width="34" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAC-HC-iVx">
+                                <rect key="frame" x="0.0" y="455" width="187.5" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-sL-G3b">
+                                        <rect key="frame" x="60" y="74" width="65" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Camera" image="TakePhoto">
+                                            <color key="titleColor" red="0.49368061790032497" green="0.45294734420262661" blue="0.88616625336826149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="analyzePhoto:" destination="rgt-ZQ-V59" eventType="touchUpInside" id="eMt-TV-Vz6"/>
+                                            <segue destination="jdZ-aw-zuS" kind="show" id="6Wk-5h-i5o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.27450980392156865" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4c-1l-dly">
+                                <rect key="frame" x="0.0" y="395" width="375" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqT-Vh-o5Y">
+                                <rect key="frame" x="2" y="64" width="374" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <segue destination="jdZ-aw-zuS" kind="show" id="mJ8-5R-JbN"/>
+                                    <outlet property="delegate" destination="rgt-ZQ-V59" id="HYe-NL-47a"/>
                                 </connections>
-                            </button>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Pc-Ua-KtM">
+                                <rect key="frame" x="187.5" y="455" width="187.5" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhc-9A-8ui">
+                                        <rect key="frame" x="58" y="72" width="69" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Photo Library" image="PhotoLibrary">
+                                            <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="analyzeSavedPhoto:" destination="rgt-ZQ-V59" eventType="touchUpInside" id="hN7-s0-oyn"/>
+                                            <segue destination="jdZ-aw-zuS" kind="show" id="YQg-nd-ywG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23529411764705882" green="0.27450980392156865" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Np-lH-PN7" firstAttribute="top" secondItem="TN5-if-D5V" secondAttribute="top" id="CGE-yJ-FP6"/>
                             <constraint firstAttribute="trailing" secondItem="6Np-lH-PN7" secondAttribute="trailing" id="Ouy-Eq-Hjj"/>
@@ -54,10 +96,14 @@
                             <constraint firstItem="6Np-lH-PN7" firstAttribute="top" secondItem="TN5-if-D5V" secondAttribute="top" id="v9u-xc-e0l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonGuardView" destination="g4c-1l-dly" id="FKa-cY-SX2"/>
+                        <outlet property="textView" destination="gqT-Vh-o5Y" id="kSP-YV-BHZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pj-4T-Lag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530" y="279"/>
+            <point key="canvasLocation" x="-530.39999999999998" y="278.41079460269867"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sqH-O6-D3j">
@@ -71,11 +117,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-WW-BLk">
-                                <rect key="frame" x="63" y="178" width="248" height="221"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVw-WW-BLk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="221"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-kQ-vT7">
-                                        <rect key="frame" x="1" y="1" width="246" height="219"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-kQ-vT7">
+                                        <rect key="frame" x="1" y="1" width="374" height="239"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -94,21 +140,13 @@
                                     <constraint firstAttribute="height" constant="221" id="xu7-3Q-MfI"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlP-tY-Kzl">
-                                <rect key="frame" x="160" y="442" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="u42-Uz-FsH"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4i-oc-AHc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="hDQ-5Q-CE8"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.54117647058823526" green="0.60784313725490191" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -117,17 +155,27 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="p6w-tW-EIr">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="rgt-ZQ-V59" kind="show" action="showDetailViewController:sender:" id="aI1-m2-tmC"/>
+                                                <segue destination="rgt-ZQ-V59" kind="show" id="bIi-Ie-xv2"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlP-tY-Kzl">
+                                <rect key="frame" x="0.0" y="637" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="analyzePhoto:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="nMC-xG-j5y"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rVw-WW-BLk" firstAttribute="leading" secondItem="vAT-lw-E86" secondAttribute="leading" id="7uT-uj-OMB"/>
                             <constraint firstAttribute="trailing" secondItem="v4i-oc-AHc" secondAttribute="trailing" id="FuL-5i-p1N"/>
+                            <constraint firstItem="rVw-WW-BLk" firstAttribute="top" secondItem="v4i-oc-AHc" secondAttribute="bottom" id="HMn-Pp-aqc"/>
                             <constraint firstItem="v4i-oc-AHc" firstAttribute="leading" secondItem="vAT-lw-E86" secondAttribute="leading" id="RBP-qE-bum"/>
+                            <constraint firstAttribute="trailing" secondItem="rVw-WW-BLk" secondAttribute="trailing" id="f5q-I0-d3q"/>
                             <constraint firstItem="v4i-oc-AHc" firstAttribute="top" secondItem="vAT-lw-E86" secondAttribute="top" id="jHl-sG-bgF"/>
                             <constraint firstAttribute="centerX" secondItem="rVw-WW-BLk" secondAttribute="centerX" id="qUY-5q-tuL"/>
                         </constraints>
@@ -138,7 +186,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8K-aI-0UQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="278"/>
+            <point key="canvasLocation" x="309.60000000000002" y="258.62068965517244"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhotoLibrary" width="200" height="200"/>
+        <image name="TakePhoto" width="200" height="200"/>
+        <image name="gradientHeader" width="50" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YQg-nd-ywG"/>
+    </inferredMetricsTieBreakers>
 </document>
