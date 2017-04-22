@@ -9,6 +9,7 @@ The goal of this project is to design an iOS app to allow blind people to more e
 
 ## Tools Used
 * [GitHub](https://github.com/) - Version Control
+* [Travis CI](https://travis-ci.org/) - Continuous Integration tool
 * [Slack](https://slack.com/) - Collaboration
 * [Xcode](https://developer.apple.com/xcode/) - IDE
 * [Swift](https://swift.org) - Programming Language
