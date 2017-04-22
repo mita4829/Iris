@@ -17,7 +17,7 @@ The goal of this project is to design an iOS app to allow blind people to more e
 
 ## Authors
 * **Ross Blassingame** - *App Design* - [GitHub](https://github.com/RossBlassingame)
-* **Ryan Baten** - *App Design* - [GitHub](https://github.com/RyanBaten)
-* **Michael Tang** - *App Design* - [GitHub](https://github.com/mita4829)
+* **Ryan Baten** - *Research* - [GitHub](https://github.com/RyanBaten)
+* **Michael Tang** - *Implemented Tesseract* - [GitHub](https://github.com/mita4829)
 
 See also the list of [contributors](https://github.com/mita4829/Iris/graphs/contributors) who participated in this project.
