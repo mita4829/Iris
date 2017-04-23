@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import AudioToolbox
 
 
 class BrailleController : UIViewController {
@@ -20,32 +19,38 @@ class BrailleController : UIViewController {
     var f = 0
     @IBAction func aButton(_ sender: Any) {
         if(a == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     @IBAction func bButton(_ sender: Any) {
         if(b == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     @IBAction func cButton(_ sender: Any) {
         if(c == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     @IBAction func dButton(_ sender: Any) {
         if(d == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     @IBAction func eButton(_ sender: Any) {
         if(e == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     @IBAction func fButton(_ sender: Any) {
         if(f == 1){
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
         }
     }
     

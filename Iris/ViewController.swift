@@ -10,72 +10,28 @@
 import UIKit
 import Foundation
 
-
 class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    //@IBOutlet weak var textView: UITextView!
     
     @IBOutlet weak var textView: UITextView!    
     @IBOutlet weak var buttonGuardView: UIView!
-    
+    @IBOutlet weak var firstLaunch: UIView!
     
     var activityIndicator:UIActivityIndicatorView!
     var messageToSendToBrailleController = String()
-    //var originalTopMargin:CGFloat!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //UIViewset(); //Debug, sigbrt after shadow draw button press
+        checkFirstLaunch()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
-    @IBAction func takePhoto(_ sender: UIButton) {
-        // 1
-        
-        view.endEditing(true)
-        //moveViewDown()
-        // 2
-        let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
-         message: nil, preferredStyle: .actionSheet)
-         // 3
-        
-         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-         let cameraButton = UIAlertAction(title: "Take Photo",
-         style: .default) { (alert) -> Void in
-         let imagePicker = UIImagePickerController()
-         imagePicker.delegate = self
-         imagePicker.sourceType = .camera
-         self.present(imagePicker,
-         animated: true,
-         completion: nil)
-         }
-         imagePickerActionSheet.addAction(cameraButton)
-         }
-         // 4
-        
-         let libraryButton = UIAlertAction(title: "Choose Existing",
-         style: .default) { (alert) -> Void in
-         let imagePicker = UIImagePickerController()
-         imagePicker.delegate = self
-         imagePicker.sourceType = .photoLibrary
-         self.present(imagePicker,
-         animated: true,
-         completion: nil)
-         }
-        
-         imagePickerActionSheet.addAction(libraryButton)
-         // 5
-         let cancelButton = UIAlertAction(title: "Cancel",
-         style: .cancel) { (alert) -> Void in
-         }
-         imagePickerActionSheet.addAction(cancelButton)
-         // 6
-         present(imagePickerActionSheet, animated: true,
-         completion: nil)
- 
+   //Helper func to dismiss welcome screen
+    @IBAction func dismissFirstLaunch(_ sender: UIButton) {
+        self.view.viewWithTag(1)?.removeFromSuperview()
     }
     
     //Camera
@@ -200,15 +156,22 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         }
     }
     
-    func UIViewset(){
-        buttonGuardView.layer.shadowColor = UIColor.black.cgColor
-        buttonGuardView.layer.shadowOpacity = 0.5
-        buttonGuardView.layer.shadowOffset = CGSize.zero
-        buttonGuardView.layer.shadowRadius = 3
-        //Cache shadow avoiding redraw
-        buttonGuardView.layer.shouldRasterize = true
+    func checkFirstLaunch() -> Void {
+        //Check if it's the first launch, if so, show welcome message
+        if(!UserDefaults.standard.bool(forKey: "HasLaunchedOnce")){
+            //update device state
+            UserDefaults.standard.set(true, forKey: "HasLaunchedOnce")
+            UserDefaults.standard.synchronize()
+            
+            //UI effects
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+            visualEffectView.frame = UIScreen.main.bounds
+            firstLaunch.insertSubview(visualEffectView, at: 0)
+            firstLaunch.isHidden = false
+            return
+
+        }
     }
-    
 }
 
 
