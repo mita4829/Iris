@@ -12,7 +12,7 @@ The goal of this project is to design an iOS app to allow blind people to more e
 * [Travis CI](https://travis-ci.org/) - Continuous Integration tool
 * [Slack](https://slack.com/) - Collaboration
 * [Xcode](https://developer.apple.com/xcode/) - IDE
-* [Swift](https://swift.org) - Programming Language
+* [Swift 3](https://swift.org) - Programming Language
 * [Objective-C](https://developer.apple.com/reference/objectivec) - Programming Language
 * [Tesseract](https://github.com/tesseract-ocr/tesseract) - OCR Library
 
