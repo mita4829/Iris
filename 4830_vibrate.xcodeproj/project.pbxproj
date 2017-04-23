@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					318638871EABD40100C65668 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = DK5EH8G5V5;
+						DevelopmentTeam = KRSWH4Y4D5;
 						ProvisioningStyle = Automatic;
 					};
 					3186389B1EABD40200C65668 = {
@@ -343,10 +343,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DK5EH8G5V5;
+				DEVELOPMENT_TEAM = KRSWH4Y4D5;
 				INFOPLIST_FILE = 4830_vibrate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-830-vibrate";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-830-vibrateMT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -356,10 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DK5EH8G5V5;
+				DEVELOPMENT_TEAM = KRSWH4Y4D5;
 				INFOPLIST_FILE = 4830_vibrate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-830-vibrate";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.-830-vibrateMT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -414,6 +414,7 @@
 				318638A71EABD40200C65668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		318638A81EABD40200C65668 /* Build configuration list for PBXNativeTarget "4830_vibrateTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				318638AA1EABD40200C65668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,11 +14,13 @@ import Foundation
 class ViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //@IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var textView: UITextView!    
     @IBOutlet weak var buttonGuardView: UIView!
     
     
     var activityIndicator:UIActivityIndicatorView!
+    var messageToSendToBrailleController = String()
     //var originalTopMargin:CGFloat!
     
     override func viewDidLoad() {
@@ -139,6 +141,32 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         activityIndicator = nil
     }
     
+    @IBAction func brailleTranslation(_ sender: UIButton) {
+        if(textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
+            let alertController = UIAlertController(title: "Braille Translation", message: "Cannot translation empty text to braille viberations.", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "continue", style: UIAlertActionStyle.default) {
+                (result : UIAlertAction) -> Void in
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        //remove newline, spaces, and non-alpnum char
+        let lower = textView.text.lowercased()
+        let noSpace = lower.replacingOccurrences(of: "\n", with: " ")
+        let regex = String(noSpace.characters.filter { "01234567890abcdefghijklmnopqrstuvwxyz ".characters.contains($0) })
+        //regex is the string containing no non-alphanum and no newlines
+        messageToSendToBrailleController = regex
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "BrailleController"){
+            let destinationController : BrailleController = segue.destination as! BrailleController
+            destinationController.messageFromViewController = messageToSendToBrailleController
+        }
+    }
     
     func performImageRecognition(image: UIImage) {
         // 1
@@ -156,7 +184,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         tesseract.recognize()
         // 7
         textView.text = tesseract.recognizedText
-        noText()
+        
         textView.isEditable = true
         // 8
         removeActivityIndicator()
@@ -183,12 +211,6 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
         buttonGuardView.layer.shouldRasterize = true
     }
     
-    func noText(){
-        if(textView.text == ""){
-            print("empty text, try again")
-        }
-    }
-
 }
 
 

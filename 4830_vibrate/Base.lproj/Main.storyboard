@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_830_vibrate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -25,43 +24,35 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaP-0K-h13">
                                 <rect key="frame" x="16" y="20" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.97079090606412932" blue="0.66438755463399135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button1"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="Button1Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oP-Xd-jpG"/>
-                                    <action selector="Button1Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="AEx-sQ-8Pa"/>
                                     <action selector="Button1Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="jMU-1j-6dE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-9Q-yaa">
                                 <rect key="frame" x="187" y="20" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.81425959140525728" blue="0.74923412096776953" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button2"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="Button2Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="3mJ-ec-Nax"/>
-                                    <action selector="Button2Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="BVv-OL-wTW"/>
                                     <action selector="Button2Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2L-7F-idb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJD-XZ-8n9">
                                 <rect key="frame" x="187" y="229" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99908456416269964" green="0.8300426174348462" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button4"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="Button4Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3LN-9Y-oTF"/>
                                     <action selector="Button4Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="FFx-I6-0fD"/>
-                                    <action selector="Button4Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="Vno-Pg-0rI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cT6-Z2-GoK">
                                 <rect key="frame" x="16" y="438" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.78198297625749003" green="0.81695098724769022" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button5"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="Button5Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="CfJ-F1-Iib"/>
                                     <action selector="Button5Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtF-Ph-UF5"/>
                                     <action selector="Button5Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="yWn-pg-NYx"/>
                                 </connections>
@@ -69,10 +60,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34c-Jp-aa9">
                                 <rect key="frame" x="187" y="438" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.8781751156808083" blue="0.77838800523703056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button6"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="Button6Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="jIu-BP-3RA"/>
                                     <action selector="Button6Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQn-cd-u4U"/>
                                     <action selector="Button6Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="v8Q-GT-hBa"/>
                                 </connections>
@@ -80,18 +69,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY5-xB-ANn">
                                 <rect key="frame" x="16" y="229" width="172" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.73108621888476977" green="1" blue="0.73381302186659747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button3"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="Button3Vibrate:" destination="BYZ-38-t0r" eventType="touchDown" id="Lxt-TA-5Yc"/>
                                     <action selector="Button3Vibrate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NgP-iJ-zhL"/>
-                                    <action selector="Button3Vibrate:" destination="BYZ-38-t0r" eventType="touchDragInside" id="kWS-5M-9P8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
