@@ -58,7 +58,7 @@ func choose(char: String) {
 		e = 0
 		f = 0
 	}
-    if char == "h" | char == "8" {
+	if char == "h" | char == "8" {
 		a = 1
 		b = 0
 		c = 1
@@ -66,7 +66,7 @@ func choose(char: String) {
 		e = 0
 		f = 0
 	}
-    if char == "i" | char == "9" {
+	if char == "i" | char == "9" {
 		a = 0
 		b = 1
 		c = 1
@@ -74,7 +74,7 @@ func choose(char: String) {
 		e = 0
 		f = 0
 	}
-    if char == "j" | char == "0" {
+	if char == "j" | char == "0" {
 		a = 0
 		b = 1
 		c = 1
@@ -82,7 +82,7 @@ func choose(char: String) {
 		e = 0
 		f = 0
 	}
-    if char == "k" {
+	if char == "k" {
 		a = 1
 		b = 0
 		c = 0
@@ -90,7 +90,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "l" {
+	if char == "l" {
 		a = 1
 		b = 0
 		c = 1
@@ -98,7 +98,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "m" {
+	if char == "m" {
 		a = 1
 		b = 1
 		c = 0
@@ -106,7 +106,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "n" {
+	if char == "n" {
 		a = 1
 		b = 1
 		c = 0
@@ -114,7 +114,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "o" {
+	if char == "o" {
 		a = 1
 		b = 0
 		c = 0
@@ -122,7 +122,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "p" {
+	if char == "p" {
 		a = 1
 		b = 1
 		c = 1
@@ -130,7 +130,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "q" {
+	if char == "q" {
 		a = 1
 		b = 1
 		c = 1
@@ -138,7 +138,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "r" {
+	if char == "r" {
 		a = 1
 		b = 0
 		c = 1
@@ -146,7 +146,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "s" {
+	if char == "s" {
 		a = 0
 		b = 1
 		c = 1
@@ -154,7 +154,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "t" {
+	if char == "t" {
 		a = 0
 		b = 1
 		c = 1
@@ -162,7 +162,7 @@ func choose(char: String) {
 		e = 1
 		f = 0
 	}
-    if char == "u" {
+	if char == "u" {
 		a = 1
 		b = 0
 		c = 0
@@ -170,7 +170,7 @@ func choose(char: String) {
 		e = 1
 		f = 1
 	}
-    if char == "v" {
+	if char == "v" {
 		a = 1
 		b = 0
 		c = 1
@@ -178,7 +178,7 @@ func choose(char: String) {
 		e = 1
 		f = 1
 	}
-    if char == "w" {
+	if char == "w" {
 		a = 0
 		b = 1
 		c = 1
@@ -186,7 +186,7 @@ func choose(char: String) {
 		e = 0
 		f = 1
 	}
-    if char == "x" {
+	if char == "x" {
 		a = 1
 		b = 1
 		c = 0
@@ -194,7 +194,7 @@ func choose(char: String) {
 		e = 1
 		f = 1
 	}
-    if char == "y" {
+	if char == "y" {
 		a = 1
 		b = 1
 		c = 0
@@ -202,7 +202,7 @@ func choose(char: String) {
 		e = 1
 		f = 1
 	}
-    if char == "z" {
+	if char == "z" {
 		a = 1
 		b = 0
 		c = 0
@@ -210,7 +210,7 @@ func choose(char: String) {
 		e = 1
 		f = 1
 	}
-    if char == " " {
+	if char == " " {
 		a = 0
 		b = 1
 		c = 0
