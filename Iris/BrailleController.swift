@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class BrailleController : UIViewController {
     var a = 0
     var b = 0
@@ -17,57 +16,121 @@ class BrailleController : UIViewController {
     var d = 0
     var e = 0
     var f = 0
+    //event listener variables
+    var u = 0
+    var v = 0
+    var w = 0
+    var x = 0
+    var y = 0
+    var z = 0
+    
+    let generator = UIImpactFeedbackGenerator(style: .heavy)
+    
     @IBAction func aButton(_ sender: Any) {
         if(a == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        u = 0
+        prepareNextChar()
     }
     @IBAction func bButton(_ sender: Any) {
         if(b == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        v = 0
+        prepareNextChar()
     }
     @IBAction func cButton(_ sender: Any) {
         if(c == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        w = 0
+        prepareNextChar()
     }
     @IBAction func dButton(_ sender: Any) {
         if(d == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        x = 0
+        prepareNextChar()
     }
     @IBAction func eButton(_ sender: Any) {
         if(e == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        y = 0
+        prepareNextChar()
     }
     @IBAction func fButton(_ sender: Any) {
         if(f == 1){
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
         }
+        z = 0
+        prepareNextChar()
     }
     
     
     @IBOutlet weak var label: UILabel!
     var messageFromViewController = String()
     
+    //Updates UI label and sets inital modes on the pins
     func prepareLabel(){
         let local = messageFromViewController
         label.text = local
-        choose(char: local[0])
+        let index = local.index(local.startIndex, offsetBy: 0)
+        u = 1
+        v = 1
+        w = 1
+        x = 1
+        y = 1
+        z = 1
+        choose(char: String(local[index]))
+        return
     }
     
     override func viewDidLoad() {
         prepareLabel()
     }
     
+    func prepareNextChar() -> Void {
+        if(u == 0 && w == 0 && v == 0 && x == 0 && y == 0 && z == 0){
+            //consume first char in message and set next viberation pattern and set label
+            //Comsume char
+            let sizeofstr = messageFromViewController.characters.count
+            if(sizeofstr == 1){
+                //End of braille translation
+                let end = UINotificationFeedbackGenerator()
+                end.notificationOccurred(.error)
+                print("End called")
+                
+                let alertController = UIAlertController(title: "Completed", message: "End of message", preferredStyle: UIAlertControllerStyle.alert)
+                let okAction = UIAlertAction(title: "continue", style: UIAlertActionStyle.default) {
+                    (result : UIAlertAction) -> Void in
+                }
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+                label.text = ""
+                messageFromViewController = ""
+                return
+            }
+            print("All buttons have been pressed")
+            //Perhaps have a viberation to indicate character is finished?
+            
+            //Consume first char and present message as a substr without the first char
+            let nextCharIndex = messageFromViewController.index(messageFromViewController.startIndex, offsetBy: 1)
+            let newSubstr = messageFromViewController.substring(from: nextCharIndex)
+            
+            //Update message
+            messageFromViewController = newSubstr
+            
+            //complete preparation and send control back to prepareLabel
+            prepareLabel()
+            
+        }
+        return
+    }
+    
+    //Map function
     func choose(char: String) {
         
         if char == "a" || char == "1" {
@@ -319,18 +382,23 @@ class BrailleController : UIViewController {
 
 
 extension String {
-    subscript(pos: Int) -> String {
-        precondition(pos >= 0, "character position can't be negative")
-        return self[pos...pos]
+    func index(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
     }
-    subscript(range: Range<Int>) -> String {
-        precondition(range.lowerBound >= 0, "range lowerBound can't be negative")
-        let lowerIndex = index(startIndex, offsetBy: range.lowerBound, limitedBy: endIndex) ?? endIndex
-        return self[lowerIndex..<(index(lowerIndex, offsetBy: range.count, limitedBy: endIndex) ?? endIndex)]
+    
+    func substring(from: Int) -> String {
+        let fromIndex = index(from: from)
+        return substring(from: fromIndex)
     }
-    subscript(range: ClosedRange<Int>) -> String {
-        precondition(range.lowerBound >= 0, "range lowerBound can't be negative")
-        let lowerIndex = index(startIndex, offsetBy: range.lowerBound, limitedBy: endIndex) ?? endIndex
-        return self[lowerIndex..<(index(lowerIndex, offsetBy: range.count, limitedBy: endIndex) ?? endIndex)]
+    
+    func substring(to: Int) -> String {
+        let toIndex = index(from: to)
+        return substring(to: toIndex)
+    }
+    
+    func substring(with r: Range<Int>) -> String {
+        let startIndex = index(from: r.lowerBound)
+        let endIndex = index(from: r.upperBound)
+        return substring(with: startIndex..<endIndex)
     }
 }
