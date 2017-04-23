@@ -162,10 +162,8 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "BrailleController"){
-            let destinationController : BrailleController = segue.destination as! BrailleController
-            destinationController.messageFromViewController = messageToSendToBrailleController
-        }
+        let destinationController : BrailleController = segue.destination as! BrailleController
+        destinationController.messageFromViewController = messageToSendToBrailleController
     }
     
     func performImageRecognition(image: UIImage) {
