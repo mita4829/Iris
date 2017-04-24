@@ -97,7 +97,7 @@ class BrailleController : UIViewController {
             //consume first char in message and set next viberation pattern and set label
             //Comsume char
             let sizeofstr = messageFromViewController.characters.count
-            if(sizeofstr == 1){
+            if(sizeofstr <= 1){
                 //End of braille translation
                 let end = UINotificationFeedbackGenerator()
                 end.notificationOccurred(.error)
