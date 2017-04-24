@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     override func viewDidLoad() {
         super.viewDidLoad()
         checkFirstLaunch()
+        textView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,7 +34,14 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     @IBAction func dismissFirstLaunch(_ sender: UIButton) {
         self.view.viewWithTag(1)?.removeFromSuperview()
     }
-    
+    //Dismiss first responder for keyboard
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n"){
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     //Camera
     @IBAction func analyzePhoto(_ sender: UIButton) {
         view.endEditing(true)
