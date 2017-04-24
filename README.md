@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/mita4829/Iris.svg?branch=master)](https://travis-ci.org/mita4829/Iris)
 
 ## Description
-The goal of this project is to design an iOS app to allow blind people to more easily read text that doesn't have accompanying braille. Users can take a picture of the text with their iPhone and Iris will convert the text to pseudo-braille and the user can interpret with vibrations on their iPhone.
+The goal of this project is to design an iOS app to allow people who are visually-impaired to easily read text found on images. Users can take a picture of the text with their iPhone, and Iris will convert the text to pseudo-braille. The users can interpret the text with vibrations on their iPhone.
 
 ![Alt text](https://github.com/mita4829/Iris/blob/master/iris.jpg)
 
