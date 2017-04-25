@@ -107,7 +107,7 @@ class ViewController: UIViewController, UITextViewDelegate, UINavigationControll
     
     @IBAction func brailleTranslation(_ sender: UIButton) {
         if(textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
-            let alertController = UIAlertController(title: "Braille Translation", message: "Cannot translation empty text to braille viberations.", preferredStyle: UIAlertControllerStyle.alert)
+            let alertController = UIAlertController(title: "Braille Translation", message: "Cannot translate empty text to braille", preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "continue", style: UIAlertActionStyle.default) {
                 (result : UIAlertAction) -> Void in
             }

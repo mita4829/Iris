@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AudioToolbox
 
 class BrailleController : UIViewController {
     var a = 0
@@ -28,42 +29,42 @@ class BrailleController : UIViewController {
     
     @IBAction func aButton(_ sender: Any) {
         if(a == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         u = 0
         prepareNextChar()
     }
     @IBAction func bButton(_ sender: Any) {
         if(b == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         v = 0
         prepareNextChar()
     }
     @IBAction func cButton(_ sender: Any) {
         if(c == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         w = 0
         prepareNextChar()
     }
     @IBAction func dButton(_ sender: Any) {
         if(d == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         x = 0
         prepareNextChar()
     }
     @IBAction func eButton(_ sender: Any) {
         if(e == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         y = 0
         prepareNextChar()
     }
     @IBAction func fButton(_ sender: Any) {
         if(f == 1){
-            generator.impactOccurred()
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         z = 0
         prepareNextChar()

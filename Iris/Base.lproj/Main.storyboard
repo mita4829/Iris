@@ -129,7 +129,7 @@
                                             <constraint firstAttribute="width" constant="100" id="JPx-yj-MH8"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iris assist those with visual impairments by translating text found in images to speech or braille vibration." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-Hi-BLz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iris assists those with visual impairments by translating text found in images to speech or braille vibration." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gK4-Hi-BLz">
                                         <rect key="frame" x="20" y="210" width="335" height="247"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" red="0.39215686274509803" green="0.43137254901960786" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
@@ -246,7 +246,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okc-6B-QlS">
-                                <rect key="frame" x="0.0" y="99" width="187" height="188.5"/>
+                                <rect key="frame" x="0.0" y="99" width="187" height="188"/>
                                 <color key="backgroundColor" red="0.59607843137254901" green="0.87450980392156863" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -256,35 +256,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVa-M2-Eci">
-                                <rect key="frame" x="188" y="98" width="187" height="188.5"/>
+                                <rect key="frame" x="188" y="99" width="187" height="188"/>
                                 <color key="backgroundColor" red="0.59607843137254901" green="0.87450980392156863" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="bButton:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="PKH-Fa-Egm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBn-aC-fAB">
-                                <rect key="frame" x="0.0" y="288.5" width="187" height="189"/>
+                                <rect key="frame" x="0.0" y="288" width="187" height="189"/>
                                 <color key="backgroundColor" red="0.4823529411764706" green="0.84313725490196079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="cButton:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="GOt-NJ-wpR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxk-C8-cTa">
-                                <rect key="frame" x="188" y="287.5" width="187" height="189"/>
+                                <rect key="frame" x="188" y="288" width="187" height="189"/>
                                 <color key="backgroundColor" red="0.4823529411764706" green="0.84313725490196079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="dButton:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="7yO-wQ-a4q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-t0-DK1">
-                                <rect key="frame" x="188" y="477.5" width="187" height="188.5"/>
+                                <rect key="frame" x="188" y="478" width="187" height="188"/>
                                 <color key="backgroundColor" red="0.3529411764705882" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="fButton:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="gfX-5S-n3T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMO-bf-Ua9">
-                                <rect key="frame" x="0.0" y="478.5" width="187" height="188.5"/>
+                                <rect key="frame" x="0.0" y="478" width="187" height="188"/>
                                 <color key="backgroundColor" red="0.3529411764705882" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="eButton:" destination="jdZ-aw-zuS" eventType="touchUpInside" id="BBf-Io-kOk"/>
