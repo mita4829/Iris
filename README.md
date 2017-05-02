@@ -4,6 +4,8 @@
 <b>Iris b1.0 Xcode 8, 8.1, 8.2, 8.3</b><br/>
 [![Build Status](https://travis-ci.org/mita4829/Iris.svg?branch=master)](https://travis-ci.org/mita4829/Iris)
 
+Demo: https://youtu.be/btsu3TAQu9Q
+
 ## Description
 The goal of this project is to design an iOS app to allow people who are visually-impaired to easily read text found on images. Users can take a picture of the text with their iPhone, and Iris will convert the text to pseudo-braille. The users can interpret the text with vibrations on their iPhone.
 
